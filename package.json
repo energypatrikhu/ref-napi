@@ -1,5 +1,5 @@
 {
-  "name": "ref-napi",
+  "name": "@2060.io/ref-napi",
   "description": "Turn Buffer instances into \"pointers\"",
   "engines": {
     "node": ">= 18.0"
@@ -34,7 +34,7 @@
     "test": "nyc mocha --expose-gc",
     "install": "node-gyp-build",
     "prebuild": "prebuildify --napi --tag-armv",
-    "prepack": "prebuildify-ci download && ([ $(ls prebuilds | wc -l) = '5' ] || (echo 'Some prebuilds are missing'; exit 1))"
+    "release": "release-it"
   },
   "dependencies": {
     "debug": "^4.1.1",
@@ -51,6 +51,28 @@
     "nyc": "^15.0.0",
     "prebuildify": "^3.0.4",
     "prebuildify-ci": "^1.0.5",
+    "release-it": "^14.13.1",
     "weak-napi": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "skipChecks": true,
+      "ignoreVersion": true,
+      "tag": "latest"
+    },
+    "git": {
+      "push": false,
+      "commit": false,
+      "requireCommits": true,
+      "tagAnnotation": "${version}",
+      "requireBranch": "latest"
+    }
   }
 }
