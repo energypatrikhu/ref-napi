@@ -524,6 +524,10 @@ export interface SizeofRegistry {
 /** Default type sizes. */
 export declare var sizeof: SizeofRegistry;
 
+/*
+// NOTE: This has been commented in order to avoid clashing with @types/ref-napi in projects
+// that are dependent on it as well
+
 declare global {
   interface Buffer {
     address(): number;
@@ -550,3 +554,4 @@ declare global {
     type?: Type | undefined;
   }
 }
+*/
