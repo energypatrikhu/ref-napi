@@ -69,6 +69,7 @@
       "tag": "latest"
     },
     "git": {
+      "changelog": "git log --pretty=format:\"* %s (%h)\" ${from}...${to}",
       "push": false,
       "commit": false,
       "requireCommits": true,
