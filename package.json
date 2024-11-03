@@ -21,7 +21,7 @@
     "64",
     "napi"
   ],
-  "version": "3.0.6",
+  "version": "3.0.7",
   "license": "MIT",
   "author": "Anna Henningsen <anna@addaleax.net>",
   "repository": {
@@ -61,7 +61,7 @@
   },
   "release-it": {
     "github": {
-      "release": true
+      "release": false
     },
     "npm": {
       "skipChecks": true,
