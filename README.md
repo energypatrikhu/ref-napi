@@ -33,7 +33,7 @@ Installation
 Install with `npm`:
 
 ``` bash
-$ npm install ref-napi
+$ npm install @energypatrikhu/ref-napi
 ```
 
 
@@ -43,7 +43,7 @@ Examples
 #### referencing and derefencing
 
 ``` js
-var ref = require('ref-napi')
+var ref = require('@energypatrikhu/ref-napi')
 
 // so we can all agree that a buffer with the int value written
 // to it could be represented as an "int *"
@@ -95,7 +95,7 @@ For example, you could define a "bigint" type that dereferences into a
 [`bigint`](https://github.com/substack/node-bigint) instance:
 
 ``` js
-var ref = require('ref-napi')
+var ref = require('@energypatrikhu/ref-napi')
 var bigint = require('bigint')
 
 // define the "type" instance according to the spec
@@ -145,10 +145,10 @@ Incompatible packages
 
 The [`ref-struct-napi`](https://www.npmjs.com/package/ref-struct-napi) and
 [`ref-array-napi`](https://www.npmjs.com/package/ref-array-napi) packages
-have names that sound like they are compatible with this module. 
+have names that sound like they are compatible with this module.
 
 They are not, and your application will experience crashes if you use
-them together with `ref-napi`. 
+them together with `ref-napi`.
 Use [`ref-struct-di`](https://www.npmjs.com/package/ref-struct-di)
 or [`ref-array-di`](https://www.npmjs.com/package/ref-array-di) instead.
 
